@@ -984,6 +984,7 @@ class RDD(object):
     def mean(self):
         """returns the mean of this dataset
 
+        :rtype: float
 
         Example:
 
@@ -992,6 +993,13 @@ class RDD(object):
         5.0
         """
         return self.stats().mean()
+
+    def meanApprox(self):
+        """same as :func:`~pysparkling.RDD.mean()`
+
+        :rtype: float
+        """
+        return self.mean()
 
     def min(self):
         """returns the minimum element"""
