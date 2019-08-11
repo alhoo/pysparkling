@@ -1734,6 +1734,8 @@ class RDD(object):
         .. note:: This method should only be used if the resulting array is expected
             to be small, as all the data is loaded into the driver's memory.
 
+        >>> from pysparkling import Context
+        >>> sc = Context()
         >>> rdd = sc.parallelize(range(0, 10))
         >>> len(rdd.takeSample(True, 20, 1))
         20
